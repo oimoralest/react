@@ -9,3 +9,4 @@ The aim of this section is to learn about component states and events
 ## References
 
 - [Handling Events](https://reactjs.org/docs/handling-events.html)
+- [State Hook](https://reactjs.org/docs/hooks-state.html)
