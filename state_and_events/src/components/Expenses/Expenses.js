@@ -1,5 +1,5 @@
-import '../styles/Expenses.css';
-import ExpenseItem from './ExpenseItem'
+import '../../styles/Expenses/Expenses.css';
+import ExpenseItem from './ExpenseItem';
 
 const Expenses = (props) => {
 	return (
@@ -15,6 +15,6 @@ const Expenses = (props) => {
 			})}
 		</div>
 	);
-}
+};
 
 export default Expenses;
