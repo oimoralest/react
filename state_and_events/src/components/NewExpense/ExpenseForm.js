@@ -1,7 +1,8 @@
 import '../../styles/NewExpense/ExpenseForm.css';
 import { useState } from 'react';
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
+	// These states save the entered data in the form
 	const [userInput, setUserInput] = useState({
 		enteredTitle: '',
 		enteredAmount: '',
@@ -10,26 +11,17 @@ const ExpenseForm = () => {
 
 	const titleChangeHandler = (event) => {
 		setUserInput((prevState) => {
-			return {
-				...prevState,
-				enteredTitle: event === '' ? event : event.target.value,
-			};
+			return { ...prevState, enteredTitle: event.target.value };
 		});
 	};
 	const amountChangeHandler = (event) => {
 		setUserInput((prevState) => {
-			return {
-				...prevState,
-				enteredAmount: event === '' ? event : event.target.value,
-			};
+			return { ...prevState, enteredAmount: event.target.value };
 		});
 	};
 	const dateChangeHandler = (event) => {
 		setUserInput((prevState) => {
-			return {
-				...prevState,
-				enteredDate: event === '' ? event : event.target.value,
-			};
+			return { ...prevState, enteredDate: event.target.value };
 		});
 	};
 
@@ -37,11 +29,14 @@ const ExpenseForm = () => {
 		event.preventDefault();
 		userInput.enteredDate = new Date(userInput.enteredDate);
 		const expenseData = userInput;
-		console.log(expenseData);
-		titleChangeHandler('');
-		amountChangeHandler('');
-		dateChangeHandler('');
-		console.log(expenseData);
+		// Calls the onSubmit prop that executes the onSubmitHandler on parent component
+		props.onSubmit(expenseData);
+		// Resets the states in the form
+		setUserInput({
+			enteredTitle: '',
+			enteredAmount: '',
+			enteredDate: '',
+		});
 	};
 
 	return (
