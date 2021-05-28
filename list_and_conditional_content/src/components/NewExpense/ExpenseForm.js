@@ -4,38 +4,39 @@ import { useState } from 'react';
 const ExpenseForm = (props) => {
 	// These states save the entered data in the form
 	const [userInput, setUserInput] = useState({
-		enteredTitle: '',
-		enteredAmount: '',
-		enteredDate: '',
+		title: '',
+		amount: '',
+		date: '',
 	});
 
 	const titleChangeHandler = (event) => {
 		setUserInput((prevState) => {
-			return { ...prevState, enteredTitle: event.target.value };
+			return { ...prevState, title: event.target.value };
 		});
 	};
 	const amountChangeHandler = (event) => {
 		setUserInput((prevState) => {
-			return { ...prevState, enteredAmount: event.target.value };
+			return { ...prevState, amount: event.target.value };
 		});
 	};
 	const dateChangeHandler = (event) => {
 		setUserInput((prevState) => {
-			return { ...prevState, enteredDate: event.target.value };
+			return { ...prevState, date: event.target.value };
 		});
 	};
 
 	const submitHandler = (event) => {
 		event.preventDefault();
-		userInput.enteredDate = new Date(userInput.enteredDate);
+		userInput.date = new Date(userInput.date);
+		userInput.amount = parseFloat(userInput.amount);
 		const expenseData = userInput;
 		// Calls the onSubmit prop that executes the onSubmitHandler on parent component
 		props.onSubmit(expenseData);
 		// Resets the states in the form
 		setUserInput({
-			enteredTitle: '',
-			enteredAmount: '',
-			enteredDate: '',
+			title: '',
+			amount: '',
+			date: '',
 		});
 	};
 
@@ -47,7 +48,7 @@ const ExpenseForm = (props) => {
 					<input
 						type="text"
 						onChange={titleChangeHandler}
-						value={userInput.enteredTitle}
+						value={userInput.title}
 					/>
 				</div>
 				<div className="new-expense__control">
@@ -57,7 +58,7 @@ const ExpenseForm = (props) => {
 						min="0.01"
 						step="0.01"
 						onChange={amountChangeHandler}
-						value={userInput.enteredAmount}
+						value={userInput.amount}
 					/>
 				</div>
 				<div className="new-expense__control">
@@ -67,7 +68,7 @@ const ExpenseForm = (props) => {
 						min="2019-01-01"
 						max="2022-12-31"
 						onChange={dateChangeHandler}
-						value={userInput.enteredDate}
+						value={userInput.date}
 					/>
 				</div>
 			</div>
