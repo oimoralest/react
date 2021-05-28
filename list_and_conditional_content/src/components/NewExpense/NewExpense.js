@@ -1,13 +1,15 @@
 import '../../styles/NewExpense/NewExpense.css';
 import ExpenseForm from './ExpenseForm';
+import { v4 as uuid4 } from 'uuid';
 
 const NewExpense = (props) => {
 	const onSubmitHandler = (enteredExpenseData) => {
 		const expenseData = {
 			...enteredExpenseData,
-			id: Math.random().toString(),
+			id: uuid4(),
 		};
-		props.onSubmit(expenseData)
+		console.log(expenseData)
+		props.onSubmit(expenseData);
 	};
 
 	return (
