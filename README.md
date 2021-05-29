@@ -1,26 +1,8 @@
-# React JS
+# Expenses List
 
 ## Description
 
-    In this repo I stored content related with React.js for educational purposes
-
-## Content
-
-- [Expenses list](./list_and_conditional_content)
-
-## Requirements
-
-Every folder has its own package.json
-
-## Usage
-
-### Cloning the repo
-
-You can clone this repository running the following command:
-
-```Shell
-    git clone --depth 1 https://github.com/oimoralest/react.git
-```
+    In this branch you will found all the steps followed to develop this project
 
 ## References
 
