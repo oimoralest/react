@@ -8,7 +8,6 @@ const NewExpense = (props) => {
 			...enteredExpenseData,
 			id: uuid4(),
 		};
-		console.log(expenseData)
 		props.onSubmit(expenseData);
 	};
 

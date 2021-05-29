@@ -9,6 +9,8 @@ const ExpenseForm = (props) => {
 		date: '',
 	});
 
+	const [form, setForm] = useState(false);
+
 	const titleChangeHandler = (event) => {
 		setUserInput((prevState) => {
 			return { ...prevState, title: event.target.value };
@@ -38,9 +40,18 @@ const ExpenseForm = (props) => {
 			amount: '',
 			date: '',
 		});
+		cancelForm();
 	};
 
-	return (
+	const cancelForm = () => {
+		setForm(false);
+	};
+
+	const renderForm = () => {
+		setForm(true);
+	};
+
+	return form ? (
 		<form onSubmit={submitHandler}>
 			<div className="new-expense__controls">
 				<div className="new-expense__control">
@@ -73,9 +84,14 @@ const ExpenseForm = (props) => {
 				</div>
 			</div>
 			<div className="new-expense__actions">
+				<button onClick={cancelForm}>Cancel</button>
 				<button type="Submit">Add Expense</button>
 			</div>
 		</form>
+	) : (
+		<div>
+			<button onClick={renderForm}>Add New Expense</button>
+		</div>
 	);
 };
 
