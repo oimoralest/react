@@ -7,10 +7,21 @@ In this repo I stored content related with React.js for educational purposes
 ## Content
 
 - [Expenses list](./expensesList)
+- [Styling React Components](./stylingReactComponents)
 
 ## Requirements
 
-Every folder has its own package.json
+Every folder has its own package.json. To install it just go to the folder
+
+```Shell
+cd folder_name
+```
+
+and run the following command:
+
+```Shell
+npm install
+```
 
 ## Usage
 
@@ -24,17 +35,7 @@ git clone --depth 1 https://github.com/oimoralest/react.git
 
 ### Expenses List
 
-Go to the project folder running the following command:
-
-```Shell
-cd expensesList
-```
-
-Install all the requeriments running the following command:
-
-```Shell
-npm install
-```
+Install the [requirements](#requirements)
 
 Run the app with the following command:
 
@@ -42,7 +43,19 @@ Run the app with the following command:
 npm start
 ```
 
-**Note:** If you are interested in how I developep this app, just clone this repo without the depth parameter and choose the expensesList branch to see all the commits and differents folders with some references.
+**Note:** If you are interested in how I developep this app, just clone this repo without the depth parameter and choose the expensesList branch to see all the commits and differents folders with some useful references.
+
+### Styling React Components
+
+Install the [requirements](#requirements)
+
+Run the app with the following command:
+
+```Shell
+npm start
+```
+
+**Note:** If you are interested in how I developep this app, just clone this repo without the depth parameter and choose the stylingReactComponents branch to see all the commits and differents folders with some useful references.
 
 ## References
 
