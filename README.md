@@ -8,6 +8,7 @@ In this repo I stored content related with React.js for educational purposes
 
 - [Expenses list](./expensesList)
 - [Styling React Components](./stylingReactComponents)
+- [Debugging project](./debuggingProject)
 
 ## Requirements
 
@@ -56,6 +57,18 @@ npm start
 ```
 
 **Note:** If you are interested in how I developep this app, just clone this repo without the depth parameter and choose the stylingReactComponents branch to see all the commits and differents folders with some useful references.
+
+### Debugging project
+
+Install the [requirements](#requirements)
+
+Run the app with the following command:
+
+```Shell
+npm start
+```
+
+**Note:** If you are interested in how I developep this app, just clone this repo without the depth parameter and choose the debugging branch to see all the commits and differents folders with some useful references.
 
 ## References
 
