@@ -81,6 +81,18 @@ Run the app with the following command:
 npm start
 ```
 
+### Fragments Portals and Refs
+
+Install the [requirements](#requirements)
+
+Run the app with the following command:
+
+```Shell
+npm start
+```
+
+**Note:** If you are interested in how I developep this app, just clone this repo without the depth parameter and choose the fragments_portals_and_refs branch to see all the commits and differents folders with some useful references.
+
 ## References
 
 - [React - The Complete Guide (incl Hooks, React Router, Redux)](https://www.udemy.com/course/react-the-complete-guide-incl-redux/): Udemy course
