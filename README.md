@@ -16,3 +16,5 @@ Also I have learned to work with Refs
   - You can't return more than one "root" JSX element (You also can't store more than one "root" JSX element in a variable) because you can return multiple values on JS
 
 - [Portals](https://reactjs.org/docs/portals.html)
+- [Refs](https://reactjs.org/docs/refs-and-the-dom.html)
+- [Uncontrolled components](https://reactjs.org/docs/uncontrolled-components.html)
