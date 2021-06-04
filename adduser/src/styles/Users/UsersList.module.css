@@ -1,0 +1,32 @@
+.users-container {
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    min-width: 400px;
+    list-style-type: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.empty {
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    min-height: 100px;
+    min-width: 400px;
+    list-style-type: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.582);
+}
+
+@media (max-width: 650px) {
+    .users-container, .empty{
+        min-width: 200px;
+    }
+}
