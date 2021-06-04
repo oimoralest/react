@@ -14,3 +14,5 @@ Also I have learned to work with Refs
 - JSX Limitations:
 
   - You can't return more than one "root" JSX element (You also can't store more than one "root" JSX element in a variable) because you can return multiple values on JS
+
+- [Portals](https://reactjs.org/docs/portals.html)
