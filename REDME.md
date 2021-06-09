@@ -9,3 +9,5 @@ In this branch I have learned:
 - Managing App-Wide or Component-Wide State with Context
 
 ## References
+
+- [Ussing the Effect Hook](https://reactjs.org/docs/hooks-effect.html)
